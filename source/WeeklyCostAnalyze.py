@@ -151,7 +151,8 @@ def pushInputPash():
     #別シートへ出力処理
     with pd.ExcelWriter(inputPath,mode='a') as writer:
         dfWbsSum.iloc[:,0:1].to_excel(writer, sheet_name=SHEET_SUM)
-    
+
+    #●集計結果書式設定～～～～～～～～～～～～～～
     #出力結果の書式変更
     wb = openpyxl.load_workbook(inputPath)
     #シート設定(集計結果)
